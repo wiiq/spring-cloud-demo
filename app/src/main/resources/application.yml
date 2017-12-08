@@ -1,0 +1,33 @@
+server:
+  port: 9080
+  context-path: /app
+
+#postgresql：
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://10.211.55.9:5432/app
+    username: postgres
+    password: 123456
+    tomcat:
+      testWhileIdle: true
+      validationQuery: SELECT VERSION()
+  jpa:
+    properties:
+      datasource:
+        driver-class-name: org.postgresql.Driver
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        ddl-auto: update
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: true
+  redis:
+    database: 10
+    host: 10.211.55.9
+    port: 6379
+    password: 123456
+  data:
+    mongodb:
+#      uri: mongodb://name:pass@localhost:27017/test
+      uri: mongodb://10.211.55.9:27017/app
