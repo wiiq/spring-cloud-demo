@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * Created by weiq on 2017/12/8.
+ * Created by weiq on 2017/12/8.   
  */
 @Entity
 @Table(name = "t_user")
